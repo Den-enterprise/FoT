@@ -337,7 +337,7 @@
               🥉
             </div>
 
-            <h4>3rd <br> Place</h4>
+            <h4>Third <br> Place</h4>
 
             <p>₹1,00,000</p>
 
@@ -1408,12 +1408,88 @@
       <!-- TYPEFORM EMBED -->
       <div class="typeform-wrapper">
 
-        <!-- Replace YOUR_TYPEFORM_LINK -->
-        <iframe
-          src="YOUR_TYPEFORM_LINK"
-          frameborder="0"
-          allowfullscreen>
-        </iframe>
+        <form id="registrationForm" class="custom-form">
+
+          <div class="row g-4 p-5">
+
+            <div class="col-md-6">
+              <input
+                type="text"
+                name="teamName"
+                placeholder="Team Name"
+                required>
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="text"
+                name="leaderName"
+                placeholder="Leader Name"
+                required>
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required>
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="text"
+                name="school"
+                placeholder="School Name"
+                required>
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="text"
+                name="grade"
+                placeholder="Grade"
+                required>
+            </div>
+
+            <div class="col-12">
+              <input
+                type="text"
+                name="teamSize"
+                placeholder="Team Size">
+            </div>
+
+            <div class="col-12">
+              <textarea
+                name="idea"
+                rows="5"
+                placeholder="Describe your startup idea..."
+                required></textarea>
+            </div>
+
+            <div class="col-12">
+
+              <button type="submit" class="submit-btn">
+                Submit Application
+              </button>
+
+            </div>
+
+          </div>
+
+        </form>
+
+        <div id="successMessage" style="display:none;">
+          Application submitted successfully!
+        </div>
 
       </div>
 

@@ -2355,7 +2355,67 @@ body {
 
   background: white;
 }
+.custom-form input,
+.custom-form textarea {
 
+  width: 100%;
+
+  padding: 20px 24px;
+
+  border-radius: 18px;
+
+  border: 1px solid #d8e5e3;
+
+  background: white;
+
+  font-size: 18px;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus {
+
+  border-color: #43d6cf;
+
+  box-shadow: 0 0 0 4px rgba(67,214,207,0.15);
+}
+
+.submit-btn {
+
+  background: #032833;
+  color: white;
+
+  border: none;
+
+  padding: 20px 36px;
+
+  border-radius: 999px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+
+  background: #021c22;
+
+  transform: translateY(-3px);
+}
+
+#successMessage {
+
+  margin-top: 30px;
+
+  color: #0f9d58;
+
+  font-size: 18px;
+  font-weight: 600;
+}
 /* =========================
    RESPONSIVE
 ========================= */
