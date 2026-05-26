@@ -2,34 +2,16 @@
 // SCROLL REVEAL ANIMATION
 // =========================
 
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-
-  reveals.forEach((element) => {
-
-    const windowHeight = window.innerHeight;
-    const elementTop = element.getBoundingClientRect().top;
-
-    const revealPoint = 120;
-
-    if (elementTop < windowHeight - revealPoint) {
-      element.classList.add("active");
-    }
-
-  });
-
-}
-
-window.addEventListener("scroll", revealOnScroll);
-
-revealOnScroll();
-
 const form = document.getElementById("registrationForm");
 
 form.addEventListener("submit", async (e) => {
 
   e.preventDefault();
+
+  const submitBtn = document.querySelector(".submit-btn");
+
+  submitBtn.innerHTML = "Submitting...";
+  submitBtn.disabled = true;
 
   const formData = new FormData(form);
 
@@ -41,6 +23,11 @@ form.addEventListener("submit", async (e) => {
       "https://script.google.com/a/macros/skyline.design/s/AKfycby6jxdHNLqAQZsfWLYsC29JZTxlwjsIihg8NrSpHFrcEL8RgsUdgzqqYC_4uFVuKGpo9Q/exec",
       {
         method: "POST",
+
+        headers: {
+          "Content-Type": "application/json"
+        },
+
         body: JSON.stringify(data)
       }
     );
@@ -49,17 +36,29 @@ form.addEventListener("submit", async (e) => {
 
     if (result.result === "success") {
 
-      document.getElementById("successMessage")
-        .style.display = "block";
+      // Hide Form
+      form.style.display = "none";
 
-      form.reset();
+      // Show Success Message
+      document.getElementById("successMessage")
+        .style.display = "flex";
+
+    } else {
+
+      alert("Submission failed.");
+
+      submitBtn.innerHTML = "Submit Application";
+      submitBtn.disabled = false;
     }
 
   } catch (error) {
 
+    console.error(error);
+
     alert("Something went wrong.");
 
-    console.error(error);
+    submitBtn.innerHTML = "Submit Application";
+    submitBtn.disabled = false;
   }
 
 });
