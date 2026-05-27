@@ -33,13 +33,9 @@ form.addEventListener("submit", async (e) => {
       }
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbyED-vRGVJVvtHaHhJs7g2EjZbyRfw3pjXLoN20U_O-22Bw356wQfXQlYQOf3TEZpfxxA/exec",
+      "https://script.google.com/macros/s/AKfycbyyhX0Lh8ga8Xbd4oO-trwNTAEDZHms7Bm2pzarWcjDg7auNwOQb_4rGKkOKdKrMu3JSw/exec",
       {
         method: "POST",
-
-        headers: {
-          "Content-Type": "application/json"
-        },
 
         body: JSON.stringify(data)
       }
