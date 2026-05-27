@@ -33,7 +33,7 @@ form.addEventListener("submit", async (e) => {
       }
 
     const response = await fetch(
-      "https://script.google.com/a/macros/skyline.design/s/AKfycby6jxdHNLqAQZsfWLYsC29JZTxlwjsIihg8NrSpHFrcEL8RgsUdgzqqYC_4uFVuKGpo9Q/exec",
+      "https://script.google.com/macros/s/AKfycbyED-vRGVJVvtHaHhJs7g2EjZbyRfw3pjXLoN20U_O-22Bw356wQfXQlYQOf3TEZpfxxA/exec",
       {
         method: "POST",
 
