@@ -2344,7 +2344,6 @@ body {
 
 .typeform-wrapper {
   width: 100%;
-  height: 760px;
 }
 
 .typeform-wrapper iframe {
@@ -2352,8 +2351,6 @@ body {
   height: 100%;
 
   border: none;
-
-  background: white;
 }
 .custom-form input,
 .custom-form textarea {
@@ -2778,4 +2775,175 @@ body {
   opacity: 1;
 
   transform: translateY(0);
+}
+
+
+.custom-select {
+
+  width: 100%;
+
+  padding: 20px 24px;
+
+  border-radius: 18px;
+
+  border: 1px solid #d8e5e3;
+
+  background: white;
+
+  font-size: 18px;
+
+  color: #5f6e74;
+
+  outline: none;
+
+  appearance: none;
+
+  transition: 0.3s ease;
+}
+
+.custom-select:focus {
+
+  border-color: #43d6cf;
+
+  box-shadow: 0 0 0 4px rgba(67,214,207,0.15);
+}
+
+
+
+@media (max-width: 768px) {
+
+  .registration-form-wrapper {
+
+    padding: 30px 20px;
+
+    overflow: visible;
+
+    height: auto;
+  }
+
+  .submit-btn {
+
+    width: 100%;
+
+    justify-content: center;
+
+    display: flex;
+  }
+
+  .custom-form .row {
+
+    row-gap: 20px;
+  }
+}
+
+.success-message {
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 60px 20px;
+}
+
+.success-card {
+
+  background: white;
+
+  padding: 50px;
+
+  border-radius: 28px;
+
+  text-align: center;
+
+  max-width: 500px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+}
+
+.success-icon {
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  background: #43d6cf;
+
+  color: #002b36;
+
+  font-size: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 25px;
+}
+
+.success-card h3 {
+
+  font-size: 32px;
+
+  margin-bottom: 14px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+}
+
+.success-card p {
+
+  color: #5f6e74;
+
+  line-height: 1.7;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .registration-wrapper {
+
+    height: auto !important;
+
+    overflow: visible !important;
+
+    padding-bottom: 40px;
+  }
+
+  .submit-btn {
+
+    width: 100%;
+
+    justify-content: center;
+
+    display: flex;
+  }
+
+  .registration-form {
+
+    padding-bottom: 30px;
+  }
+}
+
+.custom-select {
+
+  width: 100%;
+
+  padding: 22px 24px;
+
+  border-radius: 22px;
+
+  border: 1px solid #d9e7e5;
+
+  font-size: 18px;
+
+  background: white;
+
+  color: #5f6e74;
+
+  outline: none;
 }

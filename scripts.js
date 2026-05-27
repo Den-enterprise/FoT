@@ -18,6 +18,19 @@ form.addEventListener("submit", async (e) => {
   const data = Object.fromEntries(formData.entries());
 
   try {
+      const captcha = grecaptcha.getResponse();
+
+      if (!captcha) {
+
+        alert("Please complete the CAPTCHA.");
+
+        submitBtn.innerHTML =
+          "Submit Application";
+
+        submitBtn.disabled = false;
+
+        return;
+      }
 
     const response = await fetch(
       "https://script.google.com/a/macros/skyline.design/s/AKfycby6jxdHNLqAQZsfWLYsC29JZTxlwjsIihg8NrSpHFrcEL8RgsUdgzqqYC_4uFVuKGpo9Q/exec",
