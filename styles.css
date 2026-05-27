@@ -492,7 +492,7 @@ body {
 
   background: #f8f8f7;
 
-  border-radius: 40px;
+  border-radius: 0px 0px 40px 40px;
 
   padding: 70px 40px 40px;
 
@@ -2946,4 +2946,40 @@ body {
   color: #5f6e74;
 
   outline: none;
+}
+
+.next-step-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 30px;
+
+  padding: 18px 34px;
+
+  border-radius: 999px;
+
+  background: #002b36;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  font-size: 17px;
+
+  transition: 0.3s ease;
+}
+
+.next-step-btn:hover {
+
+  background: #43d6cf;
+
+  color: #002b36;
+
+  transform: translateY(-2px);
 }
