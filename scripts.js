@@ -110,7 +110,7 @@ const countdown =
   document.getElementById("countdown");
 
 const deadline = new Date(
-  "May 31, 2026 23:59:59"
+  "June 14, 2026 23:59:59"
 ).getTime();
 
 function updateCountdown() {
