@@ -43,16 +43,22 @@ form.addEventListener("submit", async (e) => {
 
     const result = await response.json();
 
-    if (result.result === "success") {
+   if (result.result === "success") {
 
-      // Hide Form
-      form.style.display = "none";
+  // Hide Form
+  form.style.display = "none";
 
-      // Show Success Message
-      document.getElementById("successMessage")
-        .style.display = "flex";
+  // Show Success Message
+  document.getElementById("successMessage")
+    .style.display = "flex";
 
-    } else {
+  // Redirect after 2 seconds
+  setTimeout(() => {
+    window.location.href =
+      "https://ivb.webflow.io/thank-you-page-fot";
+  }, 1000);
+
+} else {
 
       alert("Submission failed.");
 
